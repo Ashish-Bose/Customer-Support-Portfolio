@@ -9,6 +9,8 @@
   <style>
     body { font-family: 'Inter', system-ui, sans-serif; }
     .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%); }
+    .section { scroll-margin-top: 80px; }
+    html { scroll-behavior: smooth; }
   </style>
 </head>
 <body class="bg-zinc-50 text-zinc-900">
@@ -17,176 +19,225 @@
   <nav class="border-b bg-white sticky top-0 z-50">
     <div class="max-w-5xl mx-auto px-6 py-5 flex justify-between items-center">
       <h1 class="text-2xl font-semibold">Ashish</h1>
-      <div class="space-x-8 text-sm">
-        <a href="#services" class="hover:text-blue-600 transition">Services</a>
-        <a href="#experience" class="hover:text-blue-600 transition">Experience</a>
-        <a href="#how" class="hover:text-blue-600 transition">How it Works</a>
+      
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-8 text-sm">
+        <a href="#services" class="nav-link hover:text-blue-600 transition">Services</a>
+        <a href="#testimonials" class="nav-link hover:text-blue-600 transition">Testimonials</a>
+        <a href="#calendly" class="nav-link hover:text-blue-600 transition">Book Call</a>
+        <a href="#contact" class="nav-link hover:text-blue-600 transition">Contact</a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="mobile-menu-button" class="md:hidden text-3xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <div class="flex flex-col px-6 py-8 space-y-6 text-lg">
+        <a href="#services" class="mobile-link">Services</a>
+        <a href="#testimonials" class="mobile-link">Testimonials</a>
+        <a href="#calendly" class="mobile-link">Book Discovery Call</a>
+        <a href="#contact" class="mobile-link">Send Message</a>
       </div>
     </div>
   </nav>
 
   <!-- Hero -->
-  <section class="hero-bg text-white py-24">
+  <section class="hero-bg text-white py-24 section" id="home">
     <div class="max-w-5xl mx-auto px-6 text-center">
       <h2 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
         I Fix Slow Customer Service<br>for Small Businesses
       </h2>
       <p class="text-xl md:text-2xl text-zinc-300 max-w-3xl mx-auto mb-10">
         10+ years experience in healthcare, telecom, SaaS, B2B & B2C.<br>
-        I handle chats, emails & support — including nights, weekends, and holidays.
+        Available nights, weekends & holidays (US & EU time zones)
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="https://calendly.com/app-ashishbose" target="_blank" 
-           class="bg-white text-zinc-900 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-zinc-100 transition inline-flex items-center justify-center gap-2">
-          <i class="fas fa-calendar"></i> Book 15-Min Discovery Call
-        </a>
-        <a href="#services" 
-           class="border border-white/70 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition">
-          See Services
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Me -->
-  <section class="py-20 bg-white">
-    <div class="max-w-5xl mx-auto px-6">
-      <h3 class="text-3xl font-semibold text-center mb-12">Why Small Businesses Choose Me</h3>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="text-center">
-          <div class="w-16 h-16 mx-auto bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-6">👤</div>
-          <h4 class="font-semibold mb-2">One Dedicated Person</h4>
-          <p class="text-zinc-600">You work directly with me — no agency, no rotating team.</p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 mx-auto bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-6">🌍</div>
-          <h4 class="font-semibold mb-2">US & EU Time Zones</h4>
-          <p class="text-zinc-600">Available after hours, weekends & holidays.</p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 mx-auto bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-6">⚡</div>
-          <h4 class="font-semibold mb-2">Fast Onboarding</h4>
-          <p class="text-zinc-600">Usually live within 48-72 hours.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="py-20 bg-zinc-100">
-    <div class="max-w-5xl mx-auto px-6">
-      <h3 class="text-3xl font-semibold text-center mb-4">Services</h3>
-      <p class="text-center text-zinc-600 mb-12">Flexible packages tailored to your business needs</p>
-      
-      <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-        <div class="bg-white p-8 rounded-3xl border border-zinc-200 hover:border-blue-200 transition">
-          <h4 class="text-xl font-semibold mb-2">Starter</h4>
-          <p class="text-zinc-500 mb-6">Email + Live Chat</p>
-          <ul class="space-y-3 mb-8 text-sm">
-            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Core business hours</li>
-            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Evening coverage</li>
-          </ul>
-          <p class="text-xs text-zinc-500">Perfect for smaller volume businesses</p>
-        </div>
-
-        <div class="bg-white p-8 rounded-3xl border-2 border-blue-600 relative">
-          <div class="absolute -top-3 right-6 bg-blue-600 text-white text-xs px-4 py-1 rounded-full">Most Popular</div>
-          <h4 class="text-xl font-semibold mb-2">Growth</h4>
-          <p class="text-zinc-500 mb-6">Full Coverage</p>
-          <ul class="space-y-3 mb-8 text-sm">
-            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Weekdays + Evenings</li>
-            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Weekends & Holidays</li>
-            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Monthly report</li>
-          </ul>
-          <p class="text-xs text-zinc-500">Best for growing businesses</p>
-        </div>
-
-        <div class="bg-white p-8 rounded-3xl border border-zinc-200 hover:border-blue-200 transition">
-          <h4 class="text-xl font-semibold mb-2">Custom</h4>
-          <p class="text-zinc-500 mb-6">Tailored Solution</p>
-          <ul class="space-y-3 mb-8 text-sm">
-            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> CRM Management</li>
-            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Escalations</li>
-            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Anything you need</li>
-          </ul>
-          <p class="text-xs text-zinc-500">Let’s build the perfect plan</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience -->
-  <section id="experience" class="py-20 bg-white">
-    <div class="max-w-5xl mx-auto px-6">
-      <h3 class="text-3xl font-semibold text-center mb-12">10+ Years Experience</h3>
-      <div class="max-w-2xl mx-auto">
-        <div class="grid grid-cols-2 gap-8 text-center">
-          <div class="space-y-6">
-            <p class="font-medium">Healthcare</p>
-            <p class="font-medium">Telecommunication</p>
-            <p class="font-medium">SaaS Products</p>
-          </div>
-          <div class="space-y-6">
-            <p class="font-medium">B2B Services</p>
-            <p class="font-medium">B2C / E-commerce</p>
-          </div>
-        </div>
-        <p class="text-center mt-12 text-zinc-600">
-          I specialize in turning slow response times into fast, professional support that improves reviews and customer satisfaction.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- How It Works -->
-  <section id="how" class="py-20 bg-zinc-100">
-    <div class="max-w-5xl mx-auto px-6">
-      <h3 class="text-3xl font-semibold text-center mb-12">How It Works</h3>
-      <div class="grid md:grid-cols-4 gap-8">
-        <div class="text-center">
-          <div class="text-4xl mb-4">1️⃣</div>
-          <h4 class="font-semibold">Book a Call</h4>
-          <p class="text-sm text-zinc-600 mt-2">15-minute discovery call</p>
-        </div>
-        <div class="text-center">
-          <div class="text-4xl mb-4">2️⃣</div>
-          <h4 class="font-semibold">Review Needs</h4>
-          <p class="text-sm text-zinc-600 mt-2">I analyze your current support</p>
-        </div>
-        <div class="text-center">
-          <div class="text-4xl mb-4">3️⃣</div>
-          <h4 class="font-semibold">Onboarding</h4>
-          <p class="text-sm text-zinc-600 mt-2">Quick setup & handover</p>
-        </div>
-        <div class="text-center">
-          <div class="text-4xl mb-4">4️⃣</div>
-          <h4 class="font-semibold">I Take Over</h4>
-          <p class="text-sm text-zinc-600 mt-2">You get your time back</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Final CTA -->
-  <section class="py-24 bg-zinc-900 text-white text-center">
-    <div class="max-w-3xl mx-auto px-6">
-      <h3 class="text-4xl font-semibold mb-6">Ready to Stop Losing Customers Due to Slow Replies?</h3>
-      <p class="text-xl text-zinc-400 mb-10">Let’s fix your customer service together.</p>
-      <a href="https://calendly.com/yourusername/15min" target="_blank" 
-         class="inline-flex items-center gap-3 bg-white text-zinc-900 px-10 py-5 rounded-2xl font-semibold text-lg hover:bg-zinc-100 transition">
-        <i class="fas fa-calendar"></i> Schedule a 15-Minute Call
+      <a href="#calendly" class="inline-flex items-center gap-3 bg-white text-zinc-900 px-10 py-5 rounded-2xl font-semibold text-lg hover:bg-zinc-100 transition">
+        <i class="fas fa-calendar"></i> Book 15-Min Discovery Call
       </a>
-      <p class="mt-8 text-zinc-500">or email me at: <span class="text-white">ashish.b@aol.com</span></p>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="services" class="py-20 bg-white section">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="flex justify-center mb-8">
+        <div class="bg-zinc-100 rounded-full p-1 flex">
+          <button id="monthly-btn" class="pricing-toggle px-6 py-2 rounded-full font-medium active">Monthly</button>
+          <button id="yearly-btn" class="pricing-toggle px-6 py-2 rounded-full font-medium">Yearly (Save 15%)</button>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white border rounded-3xl p-8">
+          <h4 class="text-xl font-semibold">Starter</h4>
+          <p class="text-zinc-500 mt-2">Small volume businesses</p>
+          <div id="starter-price" class="text-4xl font-bold mt-6">$799<span class="text-sm font-normal">/mo</span></div>
+          <ul class="mt-8 space-y-3 text-sm">
+            <li class="flex gap-2"><i class="fas fa-check text-green-500"></i> Email + Live Chat</li>
+            <li class="flex gap-2"><i class="fas fa-check text-green-500"></i> Evening coverage</li>
+          </ul>
+        </div>
+
+        <div class="bg-white border-2 border-blue-600 rounded-3xl p-8 relative">
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-sm px-4 py-1 rounded-full">Most Popular</div>
+          <h4 class="text-xl font-semibold">Growth</h4>
+          <p class="text-zinc-500 mt-2">Full coverage recommended</p>
+          <div id="growth-price" class="text-4xl font-bold mt-6">$1,299<span class="text-sm font-normal">/mo</span></div>
+          <ul class="mt-8 space-y-3 text-sm">
+            <li class="flex gap-2"><i class="fas fa-check text-green-500"></i> Weekends + Holidays</li>
+            <li class="flex gap-2"><i class="fas fa-check text-green-500"></i> Monthly performance report</li>
+            <li class="flex gap-2"><i class="fas fa-check text-green-500"></i> Priority support</li>
+          </ul>
+        </div>
+
+        <div class="bg-white border rounded-3xl p-8">
+          <h4 class="text-xl font-semibold">Custom</h4>
+          <p class="text-zinc-500 mt-2">Tailored solution</p>
+          <div class="text-4xl font-bold mt-6">Let's Talk</div>
+          <ul class="mt-8 space-y-3 text-sm">
+            <li class="flex gap-2"><i class="fas fa-check text-green-500"></i> CRM Management</li>
+            <li class="flex gap-2"><i class="fas fa-check text-green-500"></i> Escalations & More</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-20 bg-zinc-100 section">
+    <div class="max-w-5xl mx-auto px-6">
+      <h3 class="text-3xl font-semibold text-center mb-12">What My Clients Say</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-3xl">
+          <p class="italic">"Ashish transformed our support. Response time dropped dramatically and our reviews improved a lot."</p>
+          <p class="mt-6 font-medium">- Sarah M., SaaS Founder (USA)</p>
+        </div>
+        <div class="bg-white p-8 rounded-3xl">
+          <p class="italic">"Excellent with EU customers. Handles weekends perfectly. Very reliable."</p>
+          <p class="mt-6 font-medium">- Michael K., E-commerce Owner (Germany)</p>
+        </div>
+        <div class="bg-white p-8 rounded-3xl">
+          <p class="italic">"Professional and caring. No more complaints about slow replies."</p>
+          <p class="mt-6 font-medium">- Priya Patel, Healthcare Practice (USA)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calendly -->
+  <section id="calendly" class="py-20 bg-white section">
+    <div class="max-w-4xl mx-auto px-6">
+      <h3 class="text-3xl font-semibold text-center mb-8">Schedule a 15-Minute Discovery Call</h3>
+      <div class="bg-zinc-100 rounded-3xl p-4">
+        <iframe src="https://calendly.com/app-ashishbose" width="100%" height="700" frameborder="0"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Form Contact -->
+  <section id="contact" class="py-20 bg-zinc-100 section">
+    <div class="max-w-4xl mx-auto px-6">
+      <h3 class="text-3xl font-semibold text-center mb-8">Or Send Me a Message</h3>
+      <div class="bg-white rounded-3xl p-6 shadow-sm">
+        <iframe 
+          src="https://forms.gle/gxuqGVuP4NqpLX4ZA" 
+          width="100%" 
+          height="750" 
+          frameborder="0" 
+          marginheight="0" 
+          marginwidth="0">
+          Loading…
+        </iframe>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-white py-8 border-t">
-    <div class="max-w-5xl mx-auto px-6 text-center text-sm text-zinc-500">
-      <p>© 2026 Ashish. All Rights Reserved.</p>
-      <p class="mt-2">Fully remote • Serving US & EU small businesses • GDPR Compliant</p>
+  <footer class="bg-zinc-900 text-white py-12">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <p>© 2026 Ashish • Remote Customer Support Specialist</p>
+      <p class="text-zinc-500 mt-2">Serving Small Businesses in US & EU • GDPR Compliant</p>
     </div>
   </footer>
 
+  <!-- Tawk.to Live Chat -->
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/6a0e377e880d091c3397256d/1jp3ohi2p';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+
+  <script>
+    // Mobile Menu
+    const mobileBtn = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const icon = mobileBtn.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-xmark');
+    });
+
+    // Close mobile menu when link is clicked
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        const icon = mobileBtn.querySelector('i');
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      });
+    });
+
+    // Smooth Scrolling for all links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        e.preventDefault();
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Pricing Toggle
+    const monthlyBtn = document.getElementById('monthly-btn');
+    const yearlyBtn = document.getElementById('yearly-btn');
+    const starterPrice = document.getElementById('starter-price');
+    const growthPrice = document.getElementById('growth-price');
+
+    yearlyBtn.addEventListener('click', () => {
+      yearlyBtn.classList.add('active', 'bg-white', 'shadow-sm');
+      monthlyBtn.classList.remove('active', 'bg-white', 'shadow-sm');
+      starterPrice.innerHTML = `$679<span class="text-sm font-normal">/mo</span>`;
+      growthPrice.innerHTML = `$1,104<span class="text-sm font-normal">/mo</span>`;
+    });
+
+    monthlyBtn.addEventListener('click', () => {
+      monthlyBtn.classList.add('active', 'bg-white', 'shadow-sm');
+      yearlyBtn.classList.remove('active', 'bg-white', 'shadow-sm');
+      starterPrice.innerHTML = `$799<span class="text-sm font-normal">/mo</span>`;
+      growthPrice.innerHTML = `$1,299<span class="text-sm font-normal">/mo</span>`;
+    });
+  </script>
 </body>
 </html>
