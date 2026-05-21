@@ -18,8 +18,10 @@
   <!-- Navigation -->
   <nav class="border-b bg-white sticky top-0 z-50">
     <div class="max-w-5xl mx-auto px-6 py-5 flex justify-between items-center">
-      <h1 class="text-2xl font-semibold">Rest easy, I’ve got customer service on duty</h1>
-      
+      <h1 class="text-xl md:text-2xl font-semibold text-left">
+        Rest easy, I’ve got customer service on duty
+      </h1>
+     
       <div class="hidden md:flex space-x-8 text-sm">
         <a href="#results" class="nav-link hover:text-blue-600 transition">Results</a>
         <a href="#services" class="nav-link hover:text-blue-600 transition">Services</a>
@@ -87,9 +89,13 @@
   <section id="services" class="py-20 bg-zinc-100 section">
     <div class="max-w-5xl mx-auto px-6">
       <div class="flex justify-center mb-8">
-        <div class="bg-white rounded-full p-1 flex shadow-sm">
-          <button id="monthly-btn" class="pricing-toggle px-6 py-2 rounded-full font-medium active">Monthly</button>
-          <button id="yearly-btn" class="pricing-toggle px-6 py-2 rounded-full font-medium">Yearly (Save 15%)</button>
+        <div class="bg-zinc-100 rounded-full p-1 flex shadow-sm">
+          <button id="monthly-btn" class="pricing-toggle px-6 py-3 rounded-full font-medium active bg-white shadow">
+            Monthly
+          </button>
+          <button id="yearly-btn" class="pricing-toggle px-6 py-3 rounded-full font-medium">
+            Yearly (Save 15%)
+          </button>
         </div>
       </div>
 
@@ -156,14 +162,13 @@
     <div class="max-w-3xl mx-auto px-6 text-center">
       <h3 class="text-4xl font-semibold mb-6">Ready to Improve Your Customer Service?</h3>
       <p class="text-xl text-zinc-400 mb-12">Choose how you'd like to get in touch:</p>
-      
+     
       <div class="flex flex-col sm:flex-row gap-6 justify-center">
         <a href="https://calendly.com/app-ashishbose" target="_blank"
            class="inline-flex items-center justify-center gap-3 bg-white text-zinc-900 px-10 py-6 rounded-3xl font-semibold text-lg hover:bg-zinc-100 transition flex-1 max-w-md">
           <i class="fas fa-calendar text-2xl"></i>
           Book 15-Min Discovery Call
         </a>
-
         <a href="https://forms.gle/gxuqGVuP4NqpLX4ZA" target="_blank"
            class="inline-flex items-center justify-center gap-3 border-2 border-white text-white px-10 py-6 rounded-3xl font-semibold text-lg hover:bg-white hover:text-zinc-900 transition flex-1 max-w-md">
           <i class="fas fa-envelope text-2xl"></i>
@@ -196,7 +201,7 @@
   </script>
 
   <script>
-    // Mobile Menu + Pricing Toggle (same as before)
+    // Mobile Menu
     const mobileBtn = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
 
@@ -216,7 +221,7 @@
       });
     });
 
-    // Pricing Toggle
+    // Pricing Toggle - Improved Active State
     const monthlyBtn = document.getElementById('monthly-btn');
     const yearlyBtn = document.getElementById('yearly-btn');
     const starterPrice = document.getElementById('starter-price');
