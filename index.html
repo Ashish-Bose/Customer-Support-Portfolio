@@ -20,15 +20,12 @@
     <div class="max-w-5xl mx-auto px-6 py-5 flex justify-between items-center">
       <h1 class="text-2xl font-semibold">Ashish</h1>
       
-      <!-- Desktop Menu -->
       <div class="hidden md:flex space-x-8 text-sm">
         <a href="#services" class="nav-link hover:text-blue-600 transition">Services</a>
         <a href="#testimonials" class="nav-link hover:text-blue-600 transition">Testimonials</a>
-        <a href="#calendly" class="nav-link hover:text-blue-600 transition">Book Call</a>
-        <a href="#contact" class="nav-link hover:text-blue-600 transition">Contact</a>
+        <a href="#cta" class="nav-link hover:text-blue-600 transition">Get Started</a>
       </div>
 
-      <!-- Mobile Hamburger -->
       <button id="mobile-menu-button" class="md:hidden text-3xl">
         <i class="fas fa-bars"></i>
       </button>
@@ -39,8 +36,7 @@
       <div class="flex flex-col px-6 py-8 space-y-6 text-lg">
         <a href="#services" class="mobile-link">Services</a>
         <a href="#testimonials" class="mobile-link">Testimonials</a>
-        <a href="#calendly" class="mobile-link">Book Discovery Call</a>
-        <a href="#contact" class="mobile-link">Send Message</a>
+        <a href="#cta" class="mobile-link">Get Started</a>
       </div>
     </div>
   </nav>
@@ -52,12 +48,18 @@
         I Fix Slow Customer Service<br>for Small Businesses
       </h2>
       <p class="text-xl md:text-2xl text-zinc-300 max-w-3xl mx-auto mb-10">
-        10+ years experience in healthcare, telecom, SaaS, B2B & B2C.<br>
-        Available nights, weekends & holidays (US & EU time zones)
+        10+ years experience • Nights, weekends & holidays included
       </p>
-      <a href="#calendly" class="inline-flex items-center gap-3 bg-white text-zinc-900 px-10 py-5 rounded-2xl font-semibold text-lg hover:bg-zinc-100 transition">
-        <i class="fas fa-calendar"></i> Book 15-Min Discovery Call
-      </a>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://calendly.com/app-ashishbose" target="_blank"
+           class="inline-flex items-center gap-3 bg-white text-zinc-900 px-8 py-5 rounded-2xl font-semibold text-lg hover:bg-zinc-100 transition">
+          <i class="fas fa-calendar"></i> Book Discovery Call
+        </a>
+        <a href="#cta" 
+           class="inline-flex items-center gap-3 border border-white/70 text-white px-8 py-5 rounded-2xl font-semibold text-lg hover:bg-white/10 transition">
+          Send Message
+        </a>
+      </div>
     </div>
   </section>
 
@@ -74,7 +76,7 @@
       <div class="grid md:grid-cols-3 gap-8">
         <div class="bg-white border rounded-3xl p-8">
           <h4 class="text-xl font-semibold">Starter</h4>
-          <p class="text-zinc-500 mt-2">Small volume businesses</p>
+          <p class="text-zinc-500 mt-2">Small volume</p>
           <div id="starter-price" class="text-4xl font-bold mt-6">$799<span class="text-sm font-normal">/mo</span></div>
           <ul class="mt-8 space-y-3 text-sm">
             <li class="flex gap-2"><i class="fas fa-check text-green-500"></i> Email + Live Chat</li>
@@ -85,23 +87,19 @@
         <div class="bg-white border-2 border-blue-600 rounded-3xl p-8 relative">
           <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-sm px-4 py-1 rounded-full">Most Popular</div>
           <h4 class="text-xl font-semibold">Growth</h4>
-          <p class="text-zinc-500 mt-2">Full coverage recommended</p>
+          <p class="text-zinc-500 mt-2">Full coverage</p>
           <div id="growth-price" class="text-4xl font-bold mt-6">$1,299<span class="text-sm font-normal">/mo</span></div>
           <ul class="mt-8 space-y-3 text-sm">
             <li class="flex gap-2"><i class="fas fa-check text-green-500"></i> Weekends + Holidays</li>
-            <li class="flex gap-2"><i class="fas fa-check text-green-500"></i> Monthly performance report</li>
+            <li class="flex gap-2"><i class="fas fa-check text-green-500"></i> Monthly report</li>
             <li class="flex gap-2"><i class="fas fa-check text-green-500"></i> Priority support</li>
           </ul>
         </div>
 
         <div class="bg-white border rounded-3xl p-8">
           <h4 class="text-xl font-semibold">Custom</h4>
-          <p class="text-zinc-500 mt-2">Tailored solution</p>
+          <p class="text-zinc-500 mt-2">Tailored plan</p>
           <div class="text-4xl font-bold mt-6">Let's Talk</div>
-          <ul class="mt-8 space-y-3 text-sm">
-            <li class="flex gap-2"><i class="fas fa-check text-green-500"></i> CRM Management</li>
-            <li class="flex gap-2"><i class="fas fa-check text-green-500"></i> Escalations & More</li>
-          </ul>
         </div>
       </div>
     </div>
@@ -113,45 +111,39 @@
       <h3 class="text-3xl font-semibold text-center mb-12">What My Clients Say</h3>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="bg-white p-8 rounded-3xl">
-          <p class="italic">"Ashish transformed our support. Response time dropped dramatically and our reviews improved a lot."</p>
+          <p class="italic">"Response time dropped dramatically and our reviews improved a lot."</p>
           <p class="mt-6 font-medium">- Sarah M., SaaS Founder (USA)</p>
         </div>
         <div class="bg-white p-8 rounded-3xl">
-          <p class="italic">"Excellent with EU customers. Handles weekends perfectly. Very reliable."</p>
+          <p class="italic">"Excellent with EU customers. Handles weekends perfectly."</p>
           <p class="mt-6 font-medium">- Michael K., E-commerce Owner (Germany)</p>
         </div>
         <div class="bg-white p-8 rounded-3xl">
-          <p class="italic">"Professional and caring. No more complaints about slow replies."</p>
+          <p class="italic">"No more complaints about slow replies. Highly recommended."</p>
           <p class="mt-6 font-medium">- Priya Patel, Healthcare Practice (USA)</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Calendly -->
-  <section id="calendly" class="py-20 bg-white section">
-    <div class="max-w-4xl mx-auto px-6">
-      <h3 class="text-3xl font-semibold text-center mb-8">Schedule a 15-Minute Discovery Call</h3>
-      <div class="bg-zinc-100 rounded-3xl p-4">
-        <iframe src="https://calendly.com/app-ashishbose" width="100%" height="700" frameborder="0"></iframe>
-      </div>
-    </div>
-  </section>
+  <!-- CTA Section with Buttons -->
+  <section id="cta" class="py-24 bg-white section">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h3 class="text-4xl font-semibold mb-6">Ready to Improve Your Customer Service?</h3>
+      <p class="text-xl text-zinc-600 mb-10">Let's discuss how I can help your business respond faster and get better reviews.</p>
+      
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <!-- Calendly Button -->
+        <a href="https://calendly.com/app-ashishbose" target="_blank"
+           class="inline-flex items-center justify-center gap-3 bg-blue-600 text-white px-10 py-6 rounded-3xl font-semibold text-lg hover:bg-blue-700 transition flex-1 max-w-xs">
+          <i class="fas fa-calendar"></i> Book 15-Min Discovery Call
+        </a>
 
-  <!-- Google Form Contact -->
-  <section id="contact" class="py-20 bg-zinc-100 section">
-    <div class="max-w-4xl mx-auto px-6">
-      <h3 class="text-3xl font-semibold text-center mb-8">Or Send Me a Message</h3>
-      <div class="bg-white rounded-3xl p-6 shadow-sm">
-        <iframe 
-          src="https://forms.gle/gxuqGVuP4NqpLX4ZA" 
-          width="100%" 
-          height="750" 
-          frameborder="0" 
-          marginheight="0" 
-          marginwidth="0">
-          Loading…
-        </iframe>
+        <!-- Google Form Button -->
+        <a href="https://forms.gle/gxuqGVuP4NqpLX4ZA" target="_blank"
+           class="inline-flex items-center justify-center gap-3 border-2 border-zinc-900 text-zinc-900 px-10 py-6 rounded-3xl font-semibold text-lg hover:bg-zinc-100 transition flex-1 max-w-xs">
+          <i class="fas fa-envelope"></i> Send Message
+        </a>
       </div>
     </div>
   </section>
@@ -160,7 +152,7 @@
   <footer class="bg-zinc-900 text-white py-12">
     <div class="max-w-5xl mx-auto px-6 text-center">
       <p>© 2026 Ashish • Remote Customer Support Specialist</p>
-      <p class="text-zinc-500 mt-2">Serving Small Businesses in US & EU • GDPR Compliant</p>
+      <p class="text-zinc-500 mt-2">US & EU Small Businesses • GDPR Compliant</p>
     </div>
   </footer>
 
@@ -191,31 +183,13 @@
       icon.classList.toggle('fa-xmark');
     });
 
-    // Close mobile menu when link is clicked
+    // Close mobile menu on link click
     document.querySelectorAll('.mobile-link').forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
         const icon = mobileBtn.querySelector('i');
         icon.classList.remove('fa-xmark');
         icon.classList.add('fa-bars');
-      });
-    });
-
-    // Smooth Scrolling for all links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        
-        e.preventDefault();
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
       });
     });
 
