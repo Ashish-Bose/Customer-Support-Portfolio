@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ashish | Customer Support Specialist</title>
+  <title>Rest easy, I’ve got customer service on duty.</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
@@ -21,6 +21,7 @@
       <h1 class="text-2xl font-semibold">Ashish</h1>
       
       <div class="hidden md:flex space-x-8 text-sm">
+        <a href="#results" class="nav-link hover:text-blue-600 transition">Results</a>
         <a href="#services" class="nav-link hover:text-blue-600 transition">Services</a>
         <a href="#testimonials" class="nav-link hover:text-blue-600 transition">Testimonials</a>
         <a href="#cta" class="nav-link hover:text-blue-600 transition">Get Started</a>
@@ -33,6 +34,7 @@
 
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
       <div class="flex flex-col px-6 py-8 space-y-6 text-lg">
+        <a href="#results" class="mobile-link">Results</a>
         <a href="#services" class="mobile-link">Services</a>
         <a href="#testimonials" class="mobile-link">Testimonials</a>
         <a href="#cta" class="mobile-link">Get Started</a>
@@ -57,11 +59,35 @@
     </div>
   </section>
 
+  <!-- Proven Results -->
+  <section id="results" class="py-20 bg-white section">
+    <div class="max-w-5xl mx-auto px-6">
+      <h3 class="text-3xl font-semibold text-center mb-12">Proven Results</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center bg-zinc-50 rounded-3xl p-8">
+          <div class="text-5xl font-bold text-blue-600 mb-2">80-90%</div>
+          <p class="font-medium">Reduction in average response time</p>
+          <p class="text-sm text-zinc-600 mt-2">From 12-24 hours down to under 1 hour</p>
+        </div>
+        <div class="text-center bg-zinc-50 rounded-3xl p-8">
+          <div class="text-5xl font-bold text-blue-600 mb-2">40-60%</div>
+          <p class="font-medium">Fewer negative reviews</p>
+          <p class="text-sm text-zinc-600 mt-2">Especially "no response" and "slow reply" complaints</p>
+        </div>
+        <div class="text-center bg-zinc-50 rounded-3xl p-8">
+          <div class="text-5xl font-bold text-blue-600 mb-2">95%+</div>
+          <p class="font-medium">Response rate within 1 hour</p>
+          <p class="text-sm text-zinc-600 mt-2">Even on weekends & holidays</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Pricing -->
-  <section id="services" class="py-20 bg-white section">
+  <section id="services" class="py-20 bg-zinc-100 section">
     <div class="max-w-5xl mx-auto px-6">
       <div class="flex justify-center mb-8">
-        <div class="bg-zinc-100 rounded-full p-1 flex">
+        <div class="bg-white rounded-full p-1 flex shadow-sm">
           <button id="monthly-btn" class="pricing-toggle px-6 py-2 rounded-full font-medium active">Monthly</button>
           <button id="yearly-btn" class="pricing-toggle px-6 py-2 rounded-full font-medium">Yearly (Save 15%)</button>
         </div>
@@ -70,8 +96,8 @@
       <div class="grid md:grid-cols-3 gap-8">
         <div class="bg-white border rounded-3xl p-8">
           <h4 class="text-xl font-semibold">Starter</h4>
-          <p class="text-zinc-500 mt-2">Small volume businesses</p>
-          <div id="starter-price" class="text-4xl font-bold mt-6">$799<span class="text-sm font-normal">/mo</span></div>
+          <p class="text-zinc-500 mt-2">Small volume</p>
+          <div id="starter-price" class="text-4xl font-bold mt-6">$499<span class="text-sm font-normal">/mo</span></div>
           <ul class="mt-8 space-y-3 text-sm">
             <li class="flex gap-2"><i class="fas fa-check text-green-500"></i> Email + Live Chat</li>
             <li class="flex gap-2"><i class="fas fa-check text-green-500"></i> Evening coverage</li>
@@ -81,8 +107,8 @@
         <div class="bg-white border-2 border-blue-600 rounded-3xl p-8 relative">
           <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-sm px-4 py-1 rounded-full">Most Popular</div>
           <h4 class="text-xl font-semibold">Growth</h4>
-          <p class="text-zinc-500 mt-2">Full coverage recommended</p>
-          <div id="growth-price" class="text-4xl font-bold mt-6">$1,299<span class="text-sm font-normal">/mo</span></div>
+          <p class="text-zinc-500 mt-2">Full coverage</p>
+          <div id="growth-price" class="text-4xl font-bold mt-6">$799<span class="text-sm font-normal">/mo</span></div>
           <ul class="mt-8 space-y-3 text-sm">
             <li class="flex gap-2"><i class="fas fa-check text-green-500"></i> Weekends + Holidays</li>
             <li class="flex gap-2"><i class="fas fa-check text-green-500"></i> Monthly report</li>
@@ -92,27 +118,32 @@
 
         <div class="bg-white border rounded-3xl p-8">
           <h4 class="text-xl font-semibold">Custom</h4>
-          <p class="text-zinc-500 mt-2">Tailored solution</p>
+          <p class="text-zinc-500 mt-2">Perfect for growing businesses</p>
           <div class="text-4xl font-bold mt-6">Let's Talk</div>
+          <ul class="mt-8 space-y-3 text-sm">
+            <li class="flex gap-2"><i class="fas fa-check text-green-500"></i> Fully Tailored Solutions</li>
+            <li class="flex gap-2"><i class="fas fa-check text-green-500"></i> CRM Management</li>
+            <li class="flex gap-2"><i class="fas fa-check text-green-500"></i> Review Management & Escalations</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Testimonials -->
-  <section id="testimonials" class="py-20 bg-zinc-100 section">
+  <section id="testimonials" class="py-20 bg-white section">
     <div class="max-w-5xl mx-auto px-6">
       <h3 class="text-3xl font-semibold text-center mb-12">What My Clients Say</h3>
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-3xl">
+        <div class="bg-white p-8 rounded-3xl border">
           <p class="italic">"Ashish transformed our support. Response time dropped dramatically and reviews improved."</p>
           <p class="mt-6 font-medium">- Sarah M., SaaS Founder (USA)</p>
         </div>
-        <div class="bg-white p-8 rounded-3xl">
+        <div class="bg-white p-8 rounded-3xl border">
           <p class="italic">"Excellent with EU customers. Handles weekends perfectly. Very reliable."</p>
           <p class="mt-6 font-medium">- Michael K., E-commerce Owner (Germany)</p>
         </div>
-        <div class="bg-white p-8 rounded-3xl">
+        <div class="bg-white p-8 rounded-3xl border">
           <p class="italic">"Professional and caring. No more complaints about slow replies."</p>
           <p class="mt-6 font-medium">- Priya Patel, Healthcare Practice (USA)</p>
         </div>
@@ -150,7 +181,7 @@
     </div>
   </footer>
 
-  <!-- Tawk.to -->
+  <!-- Tawk.to Live Chat -->
   <!--Start of Tawk.to Script-->
   <script type="text/javascript">
   var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -163,10 +194,9 @@
   s0.parentNode.insertBefore(s1,s0);
   })();
   </script>
-  <!--End of Tawk.to Script-->
 
   <script>
-    // Mobile Menu
+    // Mobile Menu + Pricing Toggle (same as before)
     const mobileBtn = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
 
